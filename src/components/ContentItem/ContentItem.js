@@ -36,7 +36,7 @@ function ContentItem(props) {
   useEffect(() => {
     const fetchData = async () => {
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
-      const url = `${apiUrl}/category/${props.Category}`; // 배포 환경으로 api변경
+      const url = `/category/${props.Category}`; // 배포 환경으로 api변경
       // const url = `http://localhost:8080/category/${props.Category}`;
       try {
         const res = await fetch(url);
