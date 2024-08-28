@@ -30,7 +30,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-
+      <Route path="*" element={<div>없는 페이지입니다</div>} />
       <Route path="/category/book" element={<Content Category="book" />} />
       <Route
         path="/category/fashion"
