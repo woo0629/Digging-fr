@@ -40,19 +40,16 @@ function App(porps) {
   useEffect(() => {
     // 만료 시간을 가져오기
     //인터벌을 테스트 후 삭제
-    const intervalId = setInterval(
-      () => {
-        const expirationDate = localStorage.getItem("tokenExpiration");
-        const nowDate = Date.now();
+    const intervalId = setInterval(() => {
+      const expirationDate = localStorage.getItem("tokenExpiration");
+      const nowDate = Date.now();
 
-        // 만료 시간이 지났으면 로그아웃
-        if (expirationDate && nowDate > expirationDate) {
-          console.log("토큰이 만료되어 자동 로그아웃됩니다.");
-          logout();
-        }
-      },
-      60 * 60 * 1000
-    );
+      // 만료 시간이 지났으면 로그아웃
+      if (expirationDate && nowDate > expirationDate) {
+        console.log("토큰이 만료되어 자동 로그아웃됩니다.");
+        logout();
+      }
+    }, 60 * 60 * 1000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -64,6 +61,7 @@ function App(porps) {
   const slideInterval = 3000; // Set the interval value as needed
   return (
     <div className="App">
+      <h1>헬로우</h1>
       <Toolbar />
       <Slide interval={slideInterval} />
       <Content />
