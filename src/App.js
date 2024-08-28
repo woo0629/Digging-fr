@@ -61,7 +61,6 @@ function App(porps) {
   const slideInterval = 3000; // Set the interval value as needed
   return (
     <div className="App">
-      <h1>헬로우</h1>
       <Toolbar />
       <Slide interval={slideInterval} />
       <Content />
