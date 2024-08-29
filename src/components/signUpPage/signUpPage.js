@@ -30,7 +30,7 @@ const SignUpPage = () => {
       setError("비밀번호가 일치하지 않습니다.");
     } else {
       try {
-        const res = await fetch(`${API_URL}signup`, {
+        const res = await fetch(`${API_URL}/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
