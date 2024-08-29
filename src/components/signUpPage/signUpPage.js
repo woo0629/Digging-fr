@@ -4,6 +4,7 @@ import Post from "../post";
 import "./signUpPage.css";
 import Toolbar from "../toolbar/toolbar";
 import Footer from "../footer/footer";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -29,7 +30,7 @@ const SignUpPage = () => {
       setError("비밀번호가 일치하지 않습니다.");
     } else {
       try {
-        const res = await fetch("http://localhost:8080/signup", {
+        const res = await fetch(`${API_URL}/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
