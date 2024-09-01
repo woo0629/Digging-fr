@@ -7,6 +7,8 @@ import Footer from "./components/footer/footer";
 import Content from "./components/temp_content/temp_content";
 import React, { useEffect, useState } from "react";
 
+const API_URL = process.env.REACT_APP_NODE_URL;
+
 function App(porps) {
   const [getdata, setGetData] = useState("");
   useEffect(() => {
@@ -15,7 +17,7 @@ function App(porps) {
       console.log(token);
       if (token) {
         try {
-          const response = await fetch("http://localhost:8080/verify", {
+          const response = await fetch(`${API_URL}/verify`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
