@@ -3,6 +3,7 @@ import "./loginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import Toolbar from "../../components/toolbar/toolbar";
 import Footer from "../../components/footer/footer";
+import { NODE_URL } from "../config";
 
 const LoginPage = () => {
   const [userData, setUserData] = useState({
@@ -17,7 +18,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const result = await fetch("http://localhost:8080/login", {
+      const result = await fetch(`${NODE_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
