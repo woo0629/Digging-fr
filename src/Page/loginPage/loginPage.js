@@ -3,7 +3,7 @@ import "./loginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import Toolbar from "../../components/toolbar/toolbar";
 import Footer from "../../components/footer/footer";
-import { NODE_URL } from "../config";
+import { NODE_URL } from "../../config";
 
 const LoginPage = () => {
   const [userData, setUserData] = useState({

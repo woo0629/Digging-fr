@@ -4,7 +4,7 @@ import Post from "../post";
 import "./signUpPage.css";
 import Toolbar from "../toolbar/toolbar";
 import Footer from "../footer/footer";
-import { NODE_URL } from "../config";
+import { NODE_URL } from "../../config";
 
 const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
