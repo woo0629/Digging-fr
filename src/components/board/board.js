@@ -134,9 +134,9 @@ function Board() {
           <div className="board-tagbox">
             <p
               className="board-lifestory "
-              onClick={() => handleTagClick("사는얘기")}
+              onClick={() => handleTagClick("공지사항")}
             >
-              사는얘기
+              공지사항
             </p>
             <p
               className="board-communication"
