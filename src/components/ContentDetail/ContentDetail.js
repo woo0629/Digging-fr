@@ -47,7 +47,7 @@ function ContentDetail(props) {
   const handleDelete = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8080/category/${props.Category}/detail`,
+        `${apiUrl}/category/${props.Category}/detail`,
         {
           method: "DELETE",
           headers: {
@@ -83,7 +83,7 @@ function ContentDetail(props) {
         loginId: userInfo.id,
         comment: comment,
       };
-      const response = await fetch("http://localhost:8080/comment?", {
+      const response = await fetch(`${apiUrl}/comment?`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,12 +105,9 @@ function ContentDetail(props) {
   const handleDeleteComment = async (e) => {
     try {
       const id = e.target.value;
-      const response = await fetch(
-        `http://localhost:8080/commentdelete?id=${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const response = await fetch(`${apiUrl}/commentdelete?id=${id}`, {
+        method: "DELETE",
+      });
       if (response.ok) {
         console.log("서버 전송 완료");
         window.location.reload();

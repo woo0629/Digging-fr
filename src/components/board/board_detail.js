@@ -56,9 +56,7 @@ function BoardDetail() {
     }
     // get 요청 해서 받아오는 부분
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`);
       if (response.ok) {
         const data = await response.json();
         setComments(data.comments);

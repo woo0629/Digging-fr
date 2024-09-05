@@ -62,9 +62,7 @@ function Board() {
 
   const handleSearchButtonClick = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/board?searchTerm=${searchTerm}`
-      );
+      const response = await fetch(`${apiUrl}/board?searchTerm=${searchTerm}`);
       if (!response.ok) {
         throw new Error("서버 응답 에러");
       }
@@ -77,18 +75,15 @@ function Board() {
   };
   const handlePostClick = async (postId) => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            action: "handlePostClick",
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          action: "handlePostClick",
+        }),
+      });
       if (response.ok) {
         fetchData(page); // 페이지 데이터 새로고침
         navigate(`/board_detail/${postId}`); // postId를 전달하여 이동

@@ -47,24 +47,21 @@ function CommentList(props) {
   const handleAddReply = async () => {
     // replyContent를 서버에 전송하고, 댓글 목록을 갱신
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            postId: postId,
-            parentId: selectedCommentId,
-            writerId: userInfoId,
-            writer: userInfo.username,
-            content: replyContent,
-            date: "",
-            action: "addReply",
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          postId: postId,
+          parentId: selectedCommentId,
+          writerId: userInfoId,
+          writer: userInfo.username,
+          content: replyContent,
+          date: "",
+          action: "addReply",
+        }),
+      });
 
       if (response.ok) {
         fetchPostDetail();
