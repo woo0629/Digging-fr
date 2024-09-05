@@ -98,7 +98,7 @@ function ToolBar(props) {
         <div className="user-actions">
           <div className="join">
             {isLoggedIn ? (
-              <p style={{ fontSize: "12px" }}>어서오세요</p>
+              <p style={{ fontSize: "12px" }}>{userInfo.username} 님</p>
             ) : (
               <a href="/signup">회원가입</a>
             )}
