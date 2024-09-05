@@ -18,7 +18,7 @@ function BoardDetail() {
   const token = localStorage.getItem("token");
   const isAuthor =
     userInfo?.id === postDetail?.id ||
-    userInfo?.id === "65703c972d7eba2e853faa06";
+    userInfo?.id === process.env.REACT_APP_ADMIN_KEY;
   const handleEdit = () => {
     navigate(`/board_edit/${postId}`);
   };

@@ -118,7 +118,7 @@ function ToolBar(props) {
             href="/manager"
             style={{
               display:
-                userInfo && userInfo.id === "65703c972d7eba2e853faa06"
+                userInfo && userInfo.id === process.env.REACT_APP_ADMIN_KEY
                   ? "block"
                   : "none",
               fontSize: "12px",

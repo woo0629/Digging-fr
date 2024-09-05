@@ -156,7 +156,7 @@ function ContentDetail(props) {
               display:
                 userInfo &&
                 (userInfo.id === contentData.id ||
-                  userInfo.id === "65703c972d7eba2e853faa06")
+                  userInfo.id === process.env.REACT_APP_ADMIN_KEY)
                   ? "block"
                   : "none",
             }}
@@ -170,7 +170,7 @@ function ContentDetail(props) {
               display:
                 userInfo &&
                 (userInfo.id === contentData.id ||
-                  userInfo.id === "65703c972d7eba2e853faa06")
+                  userInfo.id === process.env.REACT_APP_ADMIN_KEY)
                   ? "block"
                   : "none",
             }}
@@ -218,7 +218,7 @@ function ContentDetail(props) {
                   display:
                     userInfo &&
                     (userInfo.id === commentList[i].loginId ||
-                      userInfo.id === "65703c972d7eba2e853faa06")
+                      userInfo.id === process.env.REACT_APP_ADMIN_KEY)
                       ? "block"
                       : "none",
                 }}

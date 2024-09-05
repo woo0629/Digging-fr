@@ -7,7 +7,7 @@ function CommentList(props) {
   const { comments, userInfo, postId, fetchPostDetail, getPlaceholderText } =
     props;
   const userInfoId = userInfo ? userInfo.id : null;
-  const manager = "65703c972d7eba2e853faa06";
+  const manager = process.env.REACT_APP_ADMIN_KEY;
   const [showComment, setShowComment] = useState(false);
   const [selectedCommentId, setSelectedCommentId] = useState(null);
   const [replyContent, setReplyContent] = useState("");
