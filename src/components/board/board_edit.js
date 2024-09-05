@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./board_edit.css";
+import apiUrl from "../../config";
 
 const BoardEdit = () => {
   const { postId } = useParams();
@@ -32,20 +33,17 @@ const BoardEdit = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_edit/${postId}`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: postDetail.title,
-            content: postDetail.content,
-            tag: postDetail.tag,
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_edit/${postId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: postDetail.title,
+          content: postDetail.content,
+          tag: postDetail.tag,
+        }),
+      });
 
       if (response.ok) {
         // 수정이 성공하면 다른 페이지로 이동 또는 다른 로직 수행

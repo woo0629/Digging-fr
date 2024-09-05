@@ -3,6 +3,7 @@ import "./loginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import Toolbar from "../../components/toolbar/toolbar";
 import Footer from "../../components/footer/footer";
+import apiUrl from "../../config";
 
 const LoginPage = () => {
   const [userData, setUserData] = useState({
@@ -17,16 +18,13 @@ const LoginPage = () => {
     e.preventDefault();
 
     try {
-      const result = await fetch(
-        "https://port-0-digging-server-m0e1rvdd84ededf2.sel4.cloudtype.app/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      );
+      const result = await fetch(`${apiUrl}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
 
       if (result.ok) {
         const data = await result.json();

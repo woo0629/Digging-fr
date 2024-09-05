@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./manager.css";
 import Toolbar from "../../components/toolbar/toolbar";
+import apiUrl from "../../config";
 
 function Manager() {
   const [userInfo, setUserInfo] = useState([]);
@@ -11,7 +12,7 @@ function Manager() {
     // 서버에서 사용자 정보를 가져오는 함수
     async function fetchUserInfo() {
       try {
-        const response = await fetch("http://localhost:8080/manager/userInfo");
+        const response = await fetch(`${apiUrl}/manager/userInfo`);
         if (response.ok) {
           const data = await response.json();
           setUserInfo(data);
@@ -34,16 +35,13 @@ function Manager() {
 
   const handleSaveClick = async (userId) => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/manager/userInfo/${userId}`,
-        {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ alert: inputValue }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/manager/userInfo/${userId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ alert: inputValue }),
+      });
 
       if (response.ok) {
         console.log("Alert field updated successfully");

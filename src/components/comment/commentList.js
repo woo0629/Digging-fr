@@ -2,7 +2,7 @@ import "./commentList.css";
 import React, { useState } from "react";
 import formatTimeAgo from "../formatTime/formatTimeAgo";
 import "./commentList.css";
-
+import apiUrl from "../../config";
 function CommentList(props) {
   const { comments, userInfo, postId, fetchPostDetail, getPlaceholderText } =
     props;
@@ -14,19 +14,16 @@ function CommentList(props) {
   console.log("comments-commentlist.js", comments);
   const handleDeleteComment = async (commentId) => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            commentId: commentId,
-            action: "deleteComment",
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          commentId: commentId,
+          action: "deleteComment",
+        }),
+      });
 
       if (response.ok) {
         fetchPostDetail();

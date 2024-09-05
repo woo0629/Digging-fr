@@ -8,6 +8,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { ReactComponent as Back } from "./back.svg";
 import { IoIosSearch } from "react-icons/io";
 import "./board.css";
+import apiUrl from "../../config";
 
 function Board() {
   const [boardData, setBoardData] = useState([]);
@@ -20,7 +21,7 @@ function Board() {
   const fetchData = async (pageNumber, selectedTag) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/board?&page=${pageNumber}&tag=${selectedTag}`
+        `${apiUrl}/board?&page=${pageNumber}&tag=${selectedTag}`
       );
       if (!response.ok) {
         throw new Error("서버 응답 에러");

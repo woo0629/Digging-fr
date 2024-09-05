@@ -6,6 +6,7 @@ import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./ContentRegister.css";
 import jwt_decode from "jwt-decode";
+import apiUrl from "../../config";
 
 function ContentRegister(props) {
   const [userInfo, setUserInfo] = useState(null);
@@ -56,9 +57,7 @@ function ContentRegister(props) {
         formData.append("address", userInfo.address);
         formData.append("date", "");
         const res = await fetch(
-          `http://localhost:8080/register/${
-            selectedTag ? selectedTag.value : ""
-          }`,
+          `${apiUrl}/register/${selectedTag ? selectedTag.value : ""}`,
           {
             method: "POST",
             body: formData,

@@ -4,6 +4,7 @@ import Post from "../post";
 import "./signUpPage.css";
 import Toolbar from "../toolbar/toolbar";
 import Footer from "../footer/footer";
+import apiUrl from "../../config";
 
 const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -29,16 +30,13 @@ const SignUpPage = () => {
       setError("비밀번호가 일치하지 않습니다.");
     } else {
       try {
-        const res = await fetch(
-          "https://port-0-digging-server-m0e1rvdd84ededf2.sel4.cloudtype.app/signup",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(userData),
-          }
-        );
+        const res = await fetch(`${apiUrl}/signup`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        });
         if (res.ok) {
           console.log("서버전송완료");
           navigate("/");

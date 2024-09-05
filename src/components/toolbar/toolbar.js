@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./toolbar.css";
 import jwt_decode from "jwt-decode";
+import apiUrl from "../../config";
 
 function ToolBar(props) {
   const [selectedAlarmCategory, setSelectedAlarmCategory] = useState("null");
@@ -64,9 +65,7 @@ function ToolBar(props) {
     try {
       console.log("fetchAlerts호출");
       console.log(userInfo);
-      const response = await fetch(
-        `http://localhost:8080/manager/alerts/${userInfo.id}`
-      );
+      const response = await fetch(`${apiUrl}/manager/alerts/${userInfo.id}`);
       console.log(response);
       if (response.ok) {
         const data = await response.json();
@@ -86,12 +85,12 @@ function ToolBar(props) {
 
   const handleLinkClick = (e) => {
     if (userInfo === null) {
-      alert("로그인이 필요합니다.")
+      alert("로그인이 필요합니다.");
       e.preventDefault();
     } else {
-      navigate("/register")
+      navigate("/register");
     }
-  }
+  };
 
   return (
     <div className="header-container">
@@ -213,7 +212,9 @@ function ToolBar(props) {
               HOME
             </a>
             <a href="/board">커뮤니티</a>
-            <a href="/register" onClick={handleLinkClick}>판매하기</a>
+            <a href="/register" onClick={handleLinkClick}>
+              판매하기
+            </a>
             <a href="">사기조회</a>
           </div>
           <button className="searchbutton">

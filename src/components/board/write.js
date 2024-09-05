@@ -6,7 +6,7 @@ import jwt_decode from "jwt-decode";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "./write.css";
-
+import apiUrl from "../../config";
 const Write = ({ onPostSubmit }) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
@@ -67,7 +67,7 @@ const Write = ({ onPostSubmit }) => {
 
     const numericViews = parseInt(boardData.views);
     try {
-      const res = await fetch("http://localhost:8080/board", {
+      const res = await fetch(`${apiUrl}/board`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

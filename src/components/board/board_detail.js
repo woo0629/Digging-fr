@@ -7,6 +7,7 @@ import "./board_detail.css";
 import jwt_decode from "jwt-decode";
 import formatTimeAgo from "../formatTime/formatTimeAgo";
 import { IoEyeOutline } from "react-icons/io5";
+import apiUrl from "../../config";
 
 function BoardDetail() {
   const { postId } = useParams(); // URL 파라미터에서 postId 추출
@@ -24,18 +25,15 @@ function BoardDetail() {
   const handleDelete = async () => {
     try {
       console.log("handle-postId", postId);
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            action: "deletePost",
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          action: "deletePost",
+        }),
+      });
 
       if (response.ok) {
         navigate("/board");

@@ -5,6 +5,7 @@ import "./ContentDetail.css";
 import Footer from "../footer/footer";
 import jwt_decode from "jwt-decode";
 import formatTimeAgo from "../formatTime/formatTimeAgo";
+import apiUrl from "../../config";
 
 function ContentDetail(props) {
   const location = useLocation();
@@ -26,7 +27,7 @@ function ContentDetail(props) {
   console.log("contentData", contentData);
   useEffect(() => {
     const fetchData = async () => {
-      const url = `http://localhost:8080/categoryComment?category=${props.Category}&id=${contentData._id}`;
+      const url = `${apiUrl}/categoryComment?category=${props.Category}&id=${contentData._id}`;
       try {
         const res = await fetch(url);
         if (!res.ok) {

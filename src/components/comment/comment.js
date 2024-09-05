@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CommentList from "./commentList";
 import jwt_decode from "jwt-decode";
 import "./comment.css";
+import apiUrl from "../../config";
 
 function Comment(props) {
   const [commentText, setCommentText] = useState("");
@@ -25,24 +26,21 @@ function Comment(props) {
 
   const handleCommentSubmit = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:8080/board_detail/${postId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            postId: postId,
-            writerId: userInfo.id,
-            writer: userInfo.username,
-            content: commentText,
-            depth: 0,
-            action: "commentsubmit",
-            // 추가로 필요한 댓글 정보
-          }),
-        }
-      );
+      const response = await fetch(`${apiUrl}/board_detail/${postId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          postId: postId,
+          writerId: userInfo.id,
+          writer: userInfo.username,
+          content: commentText,
+          depth: 0,
+          action: "commentsubmit",
+          // 추가로 필요한 댓글 정보
+        }),
+      });
 
       if (response.ok) {
         const result = await response.json();

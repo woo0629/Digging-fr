@@ -4,6 +4,7 @@ import Toolbar from "../../components/toolbar/toolbar";
 import { useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
 import "./ContentEdit.css";
+import apiUrl from "../../config";
 
 function ContentEdit(props) {
   const location = useLocation();
@@ -46,13 +47,10 @@ function ContentEdit(props) {
         formData.append("id", userInfo.id);
         formData.append("_id", writeData._id);
         formData.append("username", userInfo.username);
-        const res = await fetch(
-          `http://localhost:8080/edit/${props.Category}`,
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
+        const res = await fetch(`${apiUrl}/edit/${props.Category}`, {
+          method: "POST",
+          body: formData,
+        });
 
         if (res.ok) {
           console.log("서버 전송 완료");

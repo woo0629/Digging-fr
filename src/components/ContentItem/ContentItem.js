@@ -7,6 +7,7 @@ import "./ContentItem.css";
 import { IoIosSearch } from "react-icons/io";
 import Footer from "../footer/footer";
 import jwt_decode from "jwt-decode";
+import apiUrl from "../../config";
 
 function ContentItem(props) {
   const navigate = useNavigate();
@@ -35,9 +36,7 @@ function ContentItem(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
-      const url = `/category/${props.Category}`; // 배포 환경으로 api변경
-      // const url = `http://localhost:8080/category/${props.Category}`;
+      const url = `${apiUrl}/category/${props.Category}`;
       try {
         const res = await fetch(url);
         if (!res.ok) {
@@ -79,7 +78,7 @@ function ContentItem(props) {
     } else {
       try {
         const res = await fetch(
-          `http://localhost:8080/${props.Category}/search?val=${searchData}`
+          `${apiUrl}/${props.Category}/search?val=${searchData}`
         );
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
