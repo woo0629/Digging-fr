@@ -31,7 +31,7 @@ const Write = ({ onPostSubmit }) => {
     }));
   };
   const tagOptions = [
-    { value: "사는얘기", label: "사는얘기" },
+    { value: "공지사항", label: "공지사항" },
     { value: "소통해요", label: "소통해요" },
     { value: "찾아줘요", label: "찾아줘요" },
   ];
