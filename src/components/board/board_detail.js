@@ -20,7 +20,7 @@ function BoardDetail() {
     userInfo?.id === postDetail?.id ||
     userInfo?.id === process.env.REACT_APP_ADMIN_KEY;
   const handleEdit = () => {
-    navigate(`/board_edit/${postId}`);
+    navigate(`/board_edit/${postId}`, { state: { postDetail } });
   };
   const handleDelete = async () => {
     try {
