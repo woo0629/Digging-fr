@@ -20,7 +20,15 @@ function BoardDetail() {
     userInfo?.id === postDetail?.id ||
     userInfo?.id === process.env.REACT_APP_ADMIN_KEY;
   const handleEdit = () => {
-    navigate(`/board_edit/${postId}`, { state: { postDetail } });
+    // 태그 데이터를 react-select가 처리할 수 있는 형태로 변환
+    const tagObject = postDetail?.tag
+      ? { value: postDetail.tag, label: postDetail.tag }
+      : null;
+
+    // 수정 페이지로 이동할 때 태그 포함한 postDetail 데이터를 전달
+    navigate(`/board_edit/${postId}`, {
+      state: { ...postDetail, tag: tagObject },
+    });
   };
   const handleDelete = async () => {
     try {
