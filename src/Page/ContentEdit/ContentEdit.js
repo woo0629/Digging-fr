@@ -3,8 +3,8 @@ import Footer from "../../components/footer/footer";
 import Toolbar from "../../components/toolbar/toolbar";
 import { useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
-import "./ContentEdit.css";
 import apiUrl from "../../config";
+import styles from "../ContentForm.module.css";
 
 function ContentEdit(props) {
   const location = useLocation();
@@ -89,70 +89,86 @@ function ContentEdit(props) {
   return (
     <div>
       <Toolbar />
-      <form onSubmit={handleSubmit} encType="multipart/form-data">
-        <div className="input_container">
-          <input
-            type="text"
-            placeholder="제목을 입력해주세요"
-            value={writeData.title}
-            onChange={(e) =>
-              setWriteData((prevWriteData) => ({
-                ...prevWriteData,
-                title: e.target.value,
-              }))
-            }
-          />
-        </div>
-        <div className="input_container">
-          <input
-            type="text"
-            placeholder="내용을 입력해주세요"
-            value={writeData.content}
-            onChange={(e) =>
-              setWriteData((prevWriteData) => ({
-                ...prevWriteData,
-                content: e.target.value,
-              }))
-            }
-          />
-        </div>
-        <div className="input_container">
-          <input
-            type="text"
-            placeholder="가격을 입력해주세요"
-            value={writeData.price}
-            onChange={(e) =>
-              setWriteData((prevWriteData) => ({
-                ...prevWriteData,
-                price: e.target.value,
-              }))
-            }
-          />
-        </div>
+      <div className={styles.formContainer}>
+        <form
+          onSubmit={handleSubmit}
+          encType="multipart/form-data"
+          className={styles.formBox}
+        >
+          <div className={`${styles.inputContainer} ${styles.titleInput}`}>
+            <label>
+              제목
+              <input
+                type="text"
+                placeholder="제목을 입력해주세요"
+                value={writeData.title}
+                onChange={(e) =>
+                  setWriteData((prevWriteData) => ({
+                    ...prevWriteData,
+                    title: e.target.value,
+                  }))
+                }
+              />
+            </label>
+          </div>
+          <div className={`${styles.inputContainer} ${styles.contentInput}`}>
+            <label>
+              내용
+              <textarea
+                type="text"
+                placeholder="내용을 입력해주세요"
+                value={writeData.content}
+                onChange={(e) =>
+                  setWriteData((prevWriteData) => ({
+                    ...prevWriteData,
+                    content: e.target.value,
+                  }))
+                }
+              />
+            </label>
+          </div>
+          <div className={`${styles.inputContainer} ${styles.priceInput}`}>
+            <label>
+              가격
+              <input
+                type="text"
+                placeholder="가격을 입력해주세요"
+                value={writeData.price}
+                onChange={(e) =>
+                  setWriteData((prevWriteData) => ({
+                    ...prevWriteData,
+                    price: e.target.value,
+                  }))
+                }
+              />
+            </label>
+          </div>
 
-        {/* 기존 이미지가 있으면 표시 */}
-        {typeof writeData.image === "string" && (
-          <div className="existing_image_container">
-            <img
-              src={writeData.image}
-              alt="기존 이미지"
-              style={{ width: "200px", margin: "10px auto" }}
+          {/* 기존 이미지가 있으면 표시 */}
+          {typeof writeData.image === "string" && (
+            <div className="existing_image_container">
+              <img
+                src={writeData.image}
+                alt="기존 이미지"
+                style={{ width: "200px", margin: "10px auto" }}
+              />
+            </div>
+          )}
+
+          <div className={`${styles.inputContainer} ${styles.priceInput}`}>
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              onChange={handleFileChange}
             />
           </div>
-        )}
-
-        <div className="input_container">
-          <input
-            type="file"
-            name="image"
-            accept="image/*"
-            onChange={handleFileChange}
-          />
-        </div>
-
-        <button type="submit">작성하기</button>
-      </form>
-      <Footer />
+          <div className={styles.buttonContainer}>
+            <button type="submit">작성하기</button>
+          </div>
+        </form>
+        <Footer />
+      </div>
     </div>
   );
 }
