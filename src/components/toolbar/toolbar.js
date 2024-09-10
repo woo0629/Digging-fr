@@ -12,10 +12,8 @@ function ToolBar(props) {
   const navigate = useNavigate();
   const [alertMsg, setAlertMsg] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
-
+  const token = localStorage.getItem("token");
   useEffect(() => {
-    const token = localStorage.getItem("token");
-
     if (token) {
       // 토큰이 존재할 경우 디코드하여 사용자 정보 설정
       const decoded = jwt_decode(token);
@@ -84,9 +82,8 @@ function ToolBar(props) {
   };
 
   const handleLinkClick = (e) => {
-    if (userInfo === null) {
-      alert("로그인이 필요합니다.");
-      e.preventDefault();
+    if (!token) {
+      navigate("/login");
     } else {
       navigate("/register");
     }
