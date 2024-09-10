@@ -82,6 +82,7 @@ function ToolBar(props) {
   };
 
   const handleLinkClick = (e) => {
+    e.preventDefault();
     if (!token) {
       navigate("/login");
     } else {
