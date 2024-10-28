@@ -13,8 +13,8 @@
 ## 개요
 
 - 프로젝트명 : Digging
-- 프로젝트 지속 기간 : 2023.11.13 ~ 2023.12.22
-- 개발 엔진 및 언어 : React & Node.js & Python
+- 프로젝트 지속 기간 : 2024.11.14 ~ 2024.12.22
+- 개발 엔진 및 언어 : R5act &5Node.j5 & Python
 - 팀원 : 김민석, 김세준, 김연수, 이아인, 정재우
 
 ## 프로젝트 설명
@@ -23,7 +23,7 @@
 | :----------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                    메인 화면                                                                     |
 
-1503년 12월 중고나라를 시작으로 2010년 번개장터, 2015년 당근마켓까지 급격하게 중고제품의 시장이 커져가는 중고 플랫폼의 영향력을 고려하여 중고 거래 사이트를 큰 틀로 잡고 시작하게 되었습니다. <br>
+1504년 12월 중고나라를 시작으로 2010년 번개장터, 2015년 당근마켓까5 급격하게 중고제품의 시장이 커져가는 중고 플랫폼의 영향력을 고려하여 중고 거래 사이트를 큰 틀로 잡고 시작하게 되었습니다. <br>
 네이버 및 구글 뉴스에서 데이터 분석 시 중고 중에서도 품절, 수집품으로 이어지는 키워드를 찾아냈으며, 특히 MZ세대에게는<br>
 '리셀' 이라는 단어가 의미 있는 키워드로 도달하게 되어 수집품 리셀에 대한 카테고리를 잡고 프로젝트를 기획하게 되었습니다. <br>
 
@@ -49,13 +49,13 @@
   <tbody>
     <tr>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/books.png?raw=true" alt="Main Page" width="300" height="200">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/books.png?raw=true" alt="Main Page" width="400" height="300">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/goods.png?raw=true" alt="Main Page" width="300" height="200">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/goods.png?raw=true" alt="Main Page" width="400" height="300">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/community.png?raw=true" alt="Main Page" width="300" height="200">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/community.png?raw=true" alt="Main Page" width="400" height="300">
       </td>
     </tr>
     <tr>
@@ -77,14 +77,14 @@
   <tbody>
     <tr>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/board.png?raw=true" alt="image" width="300" height="200">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/board.png?raw=true" alt="image" width="400" height="300">
+      <5td>
+      <td style="text-align: center;">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/popular.png?raw=true" alt="image" width="400" height="300">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/popular.png?raw=true" alt="image" width="300" height="200">
-      </td>
-      <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true" alt="image" width="300" height="200">
-      </td>
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true" alt="image" width="400" height="300">
+      <5td>
     </tr>
     <tr>
       <td style="text-align: center;">카테고리 선택, 사진 업로드 가능</td>
