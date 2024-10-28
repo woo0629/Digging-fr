@@ -19,9 +19,9 @@
 
 ## 프로젝트 설명
 
-| <img src="https://github.com/woo0629/Digging-fr/blob/main/assets/mainpage.png?raw=true" width="400" height="500" text-align: center/> |
-| :-----------------------------------------------------------------------------------------------------------------------------------: |
-|                                                               메인 화면                                                               |
+| <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/mainpage.png?raw=true" width="400" height="500" text-align: center/> |
+| :----------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                    메인 화면                                                                     |
 
 2003년 12월 중고나라를 시작으로 2010년 번개장터, 2015년 당근마켓까지 급격하게 중고제품의 시장이 커져가는 중고 플랫폼의 영향력을 고려하여 중고 거래 사이트를 큰 틀로 잡고 시작하게 되었습니다. <br>
 네이버 및 구글 뉴스에서 데이터 분석 시 중고 중에서도 품절, 수집품으로 이어지는 키워드를 찾아냈으며, 특히 MZ세대에게는<br>
@@ -38,15 +38,15 @@
 
 ## 구현 상세 페이지
 
-| 판매 페이지1                                                                           | 판매 페이지2                                                                        | 커뮤니티                                                                                |
-| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/mainpage.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/goods.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/community.png?raw=true) |
-| 도서 관련 판매 페이지                                                                  | 굿즈 관련 판매 페이지                                                               | 댓글 대댓글 작성 가능, 커뮤니티 분류 가능                                               |
+| 판매 페이지1                                                                                      | 판매 페이지2                                                                                   | 커뮤니티                                                                                           |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/mainpage.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/goods.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/community.png?raw=true) |
+| 도서 관련 판매 페이지                                                                             | 굿즈 관련 판매 페이지                                                                          | 댓글 대댓글 작성 가능, 커뮤니티 분류 가능                                                          |
 
-| 물품 등록하기                                                                       | 인기 검색어 차트                                                                      | 회원가입                                                                           |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/board.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/popular.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/join.png?raw=true) |
-| 카테고리 선택, 사진 업로드 가능                                                     | 매일 오전 10시 업데이트                                                               | 회원가입                                                                           |
+| 물품 등록하기                                                                                  | 인기 검색어 차트                                                                                 | 회원가입                                                                                      |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/board.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/popular.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true) |
+| 카테고리 선택, 사진 업로드 가능                                                                | 매일 오전 10시 업데이트                                                                          | 회원가입                                                                                      |
 
 ## 버전 정보
 
