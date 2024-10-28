@@ -61,7 +61,7 @@
     <tr>
       <td style="text-align: center;">도서 관련 판매 페이지</td>
       <td style="text-align: center;">굿즈 관련 판매 페이지</td>
-      <td style="text-align: center;">댓글 대댓글 작성 가능, 커뮤니티 분류 가능</td>
+      <td style="text-align: center;">댓글 대댓글 작성 및 커뮤니티 분류 기능 구현</td>
     </tr>
   </tbody>
 </table>
@@ -85,7 +85,7 @@
         <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true" alt="image" width="500" height="400">
     </tr>
     <tr>
-      <td style="text-align: center;">카테고리 선택, 사진 업로드 가능</td>
+      <td style="text-align: center;">카테고리 선택, 사진 업로드 기능 구현</td>
       <td style="text-align: center;">매일 오전 10시 업데이트</td>
       <td style="text-align: center;">회원가입</td>
     </tr>
