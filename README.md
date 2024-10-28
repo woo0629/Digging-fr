@@ -49,13 +49,13 @@
   <tbody>
     <tr>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/books.png?raw=true" alt="Main Page" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/books.png?raw=true" alt="Main Page" width="500" height="500">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/goods.png?raw=true" alt="Main Page" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/goods.png?raw=true" alt="Main Page" width="500" height="500">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/community.png?raw=true" alt="Main Page" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/community.png?raw=true" alt="Main Page" width="500" height="500">
       </td>
     </tr>
     <tr>
@@ -77,12 +77,12 @@
   <tbody>
     <tr>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/board.png?raw=true" alt="image" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/board.png?raw=true" alt="image" width="500" height="500">
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/popular.png?raw=true" alt="image" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/popular.png?raw=true" alt="image" width="500" height="500">
       </td>
       <td style="text-align: center;">
-        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true" alt="image" width="400" height="500">
+        <img src="https://github.com/woo0629/Digging-fr/blob/main/public/img/assets/join.png?raw=true" alt="image" width="500" height="500">
     </tr>
     <tr>
       <td style="text-align: center;">카테고리 선택, 사진 업로드 가능</td>
