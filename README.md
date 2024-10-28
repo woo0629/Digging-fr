@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Digging
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### '당신의 취향을 파다'
 
-## Available Scripts
+##### 웹사이트 'Digging'은 수집품을 C2C 거래로 수수료 발생없이 물건을 구매 및 판매 할 수 있으며, 공통의 관심사를 가진 사람들이 모여 커뮤니티의 장이 될 수 있는 사이트입니다.
 
-In the project directory, you can run:
+## 목차
 
-### `npm start`
+- [개요](#개요)
+- [프로젝트 설명](#프로젝트-설명)
+- [구현 기능](#구현-기능)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 개요
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 프로젝트명 : Digging
+- 프로젝트 지속 기간 : 2023.11.13 ~ 2023.12.22
+- 개발 엔진 및 언어 : React & Node.js & Python
+- 팀원 : 김민석, 김세준, 김연수, 이아인, 정재우
 
-### `npm test`
+## 프로젝트 설명
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| <img src="https://github.com/woo0629/Digging-fr/blob/main/assets/mainpage.png?raw=true" width="400" height="500" text-align: center/> |
+| :-----------------------------------------------------------------------------------------------------------------------------------: |
+|                                                               메인 화면                                                               |
 
-### `npm run build`
+2003년 12월 중고나라를 시작으로 2010년 번개장터, 2015년 당근마켓까지 급격하게 중고제품의 시장이 커져가는 중고 플랫폼의 영향력을 고려하여 중고 거래 사이트를 큰 틀로 잡고 시작하게 되었습니다. <br>
+네이버 및 구글 뉴스에서 데이터 분석 시 중고 중에서도 품절, 수집품으로 이어지는 키워드를 찾아냈으며, 특히 MZ세대에게는<br>
+'리셀' 이라는 단어가 의미 있는 키워드로 도달하게 되어 수집품 리셀에 대한 카테고리를 잡고 프로젝트를 기획하게 되었습니다. <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 구현 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 회원가입 시 다음 포스트코드를 활용하여 우편번호 서비스를 이용해 편리하게 주소 검색이 가능합니다.
+- 댓글 작성 시 서버에 해당 내용이 전달 될 때 작성한 사용자의 정보까지 전달되어 어떤 사용자가 댓글을 작성했는 지 알 수 있습니다.
+- 검색 기능은 props를 이용하여 각 카테고리 내에서만 검색 될 수 있으며, 정규표현식을 사용하여 겹치게 되는 단어만 있어도 검색이 가능합니다.
+- 조회 수는 사용자가 게시글을 누를 때마다 서버에 요청하게 되어 서버에서 받아 올 때마다 조회수를 1씩 증가 시킵니다.
+- 페이지네이션을 활용하여 게시글이 10개가 넘어 갈 경우 자동으로 다음 페이지로 넘어갑니다.
+- 실시간 검색 순위는 flask 서버에서 Apscheduler를 이용하여 정해진 시간마다 데이터를 수집하여 순위를 보여줍니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 구현 상세 페이지
 
-### `npm run eject`
+| 판매 페이지1                                                                           | 판매 페이지2                                                                        | 커뮤니티                                                                                |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/mainpage.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/goods.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/community.png?raw=true) |
+| 도서 관련 판매 페이지                                                                  | 굿즈 관련 판매 페이지                                                               | 댓글 대댓글 작성 가능, 커뮤니티 분류 가능                                               |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| 물품 등록하기                                                                       | 인기 검색어 차트                                                                      | 회원가입                                                                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/board.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/popular.png?raw=true) | ![image](https://github.com/woo0629/Digging-fr/blob/main/assets/join.png?raw=true) |
+| 카테고리 선택, 사진 업로드 가능                                                     | 매일 오전 10시 업데이트                                                               | 회원가입                                                                           |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 버전 정보
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- node.js v18.17.1
